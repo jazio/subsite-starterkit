@@ -20,46 +20,61 @@ own repository on GitHub. We are in fact using two repositories: 'dev' and
 
 ### 1. Create a new repository on GitHub
 
-1. Log in to GitHub.
+There are two situations:
+
+A. If you are a ec-europa team member an need to register a new myproject-reference repository 
+
+1. Log in to GitHub
+
+_Note: You need to decide whether you repository will be private or public. 
+We encourage developers to make their code public, but you will need to consult your
+client and ask if they agree with it. If the code is public, take care not
+to commit any sensitive data such as e-mail addresses, API keys or
+passwords. Don't add a README or any other files, just leave it empty._
+
 2. Go to https://github.com/ec-europa and click on "New repository" to create
    your repository. If you do not have access to this then please ask your
    project manager to create a team for you.
-3. Choose a repository name for your project, making sure it ends in '-dev'.
-   For example if you are creating a website for the European Department for
-   the Promotion of Interoperable Agricultural Research and Development a
-   good name for your repository would be `edpiard-dev`.
-4. Decide whether you repository will be private or public. We encourage
-   developers to make their code public, but you will need to consult your
-   client and ask if they agree with it. If the code is public, take care not
-   to commit any sensitive data such as e-mail addresses, API keys or
-   passwords.
-5. Don't add a README or any other files, just leave it empty.
-6. Click "Create repository".
-7. On the next page you will see the URL of your repository, which will look
-   similar to this: `https://github.com/ec-europa/myproject-dev.git`. We will need
-   this in the next step.
-
-### 2. Fork the starterkit
-
-Make a fork of the Subsite Starterkit by downloading it and then pushing it to
-your own project's repository. Let's assume we are going to push to a
-repository called 'myproject-dev'.
 
 ```
-# Download the Subsite Starterkit.
-$ git clone https://github.com/ec-europa/subsite-starterkit.git
-$ cd subsite-starterkit
-
-# Remove the 'origin' remote, and replace it with the one from our project repo.
-$ git remote rm origin
-$ git remote add origin https://github.com/ec-europa/myproject-dev.git
-
-# Test the connection with the project repository.
-$ git fetch origin
-
-# Push our initial code base to the project repository.
-$ git push origin master
+git clone https://github.com/ec-europa/myproject-reference.git
+cd myproject-reference
 ```
+
+3. Add starterkit and push back remotely
+```
+git remote add starterkit https://github.com/ec-europa/subsite-starterkit.git
+git fetch starterkit
+git merge starterkit/master
+git push origin master
+```
+
+
+B. Or, if you are a developer and need to start a new project, 
+
+
+1. Fork my-project-reference repository into your own. Go to the https://github.com/ec-europa/myproject-reference
+and click on the Fork button. Fork it under your account.
+
+2. Choose a repository name for your project, making sure it ends in '-dev': e.g. growth-dev
+   You can rename it from your project Settings section.
+
+```
+git clone https://github.com/ec-europa/myproject-dev.git
+cd myproject-dev
+```
+
+Optionally add starterkit:
+
+```
+git remote add starterkit https://github.com/ec-europa/subsite-starterkit.git
+```
+3. Check the URL of your repository, which will look
+   similar to this: `https://github.com/ec-europa/myproject-dev.git`. 
+
+From now on everytime you need to submit your work create from the github interface a pull request 
+from your _'dev'_ repository to the _'reference'_ repository.
+
 
 ### 3. Create a build.properties file
 
