@@ -26,7 +26,7 @@ A. If you are a ec-europa team member an need to register a new myproject-refere
 
 1. Log in to GitHub
 
-_Note: You need to decide whether you repository will be private or public. 
+_Note: You need to decide whether your repository will be private or public. 
 We encourage developers to make their code public, but you will need to consult your
 client and ask if they agree with it. If the code is public, take care not
 to commit any sensitive data such as e-mail addresses, API keys or
@@ -54,9 +54,9 @@ B. Or, if you are a developer and need to start a new project,
 
 
 1. Fork my-project-reference repository into your own. Go to the https://github.com/ec-europa/myproject-reference
-and click on the Fork button. Fork it under your account.
+and click on the Fork button. Fork it to your account.
 
-2. Choose a repository name for your project, making sure it ends in '-dev': e.g. growth-dev
+2. Choose a repository name for your project, making sure it ends with '-dev': e.g. growth-dev
    You can rename it from your project Settings section.
 
 ```
@@ -72,8 +72,8 @@ git remote add starterkit https://github.com/ec-europa/subsite-starterkit.git
 3. Check the URL of your repository, which will look
    similar to this: `https://github.com/ec-europa/myproject-dev.git`. 
 
-From now on everytime you need to submit your work create from the github interface a pull request 
-from your _'dev'_ repository to the _'reference'_ repository.
+From now on everytime you need to submit your work create a pull request on the github interface  
+from your _'-dev'_ repository to the _'-reference'_ repository.
 
 
 ### 3. Create a build.properties file
